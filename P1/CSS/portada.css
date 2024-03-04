@@ -1,21 +1,28 @@
 body {
     margin: 20px;
-  }
+    background-color: #edbb99 ;
+}
   
-  .sidebar {
+.sidebar {
     grid-area: sidebar;
-  }
+}
   
 .content {
     grid-area: content;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr;
+    place-items: center;
 }
+
+.content img{
+    max-width: 100%;
+}
+
 .header {
     grid-area: header;
     text-align: center;
-    
+    background-color: ;
 }
   
 .footer {
@@ -32,7 +39,7 @@ body {
     "header  header  header"
     "sidebar content content"
     "footer  footer  footer";
-    background-color: #fff;
+    background-color: #edbb99 ;
     height: 100vh;
 }
   
@@ -48,5 +55,15 @@ body {
 }
 
 .actividad{
-    align-items: center;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.imagen{
+    width: 200px;
+    height: 200px;
+    align-self: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
 }
