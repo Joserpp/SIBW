@@ -1,20 +1,25 @@
 body {
     margin: 20px;
-    background-color: #edbb99 ;
+    background-color:  #82e0aa;
 }
   
 .sidebar {
     grid-area: sidebar;
-    background-color: #d35400;
+    /* background-color: #d4efdf; */
+    padding: 30px;
+	background-image: url('../Imagenes/Fondobarra.png');
+	background-size: cover; /* Cubre toda el área del cuerpo */
+    background-position: center; /* Centra la imagen */
 }
   
 .content {
     grid-area: content;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
-    background-color: #ffffff;
+    background-color: #52be80;
+    padding: 30px;
 }
 
 .content img{
@@ -23,14 +28,33 @@ body {
 
 .header {
     grid-area: header;
+	display: grid;
     text-align: center;
-    background-color:  #a04000;
+    background-color: #d4efdf;
+    align-items: center;
+    padding: 5px;
+    grid-template-areas:
+    "logo titulo titulo titulo"
+    "logo menu menu menu";
 }
   
 .footer {
     grid-area: footer;
     text-align: center;
-    background-color:  #a04000;
+    background-color:  #145a32;
+    padding: 10px;
+}
+
+/* Estilo para el enlace que hay en el "footer" */
+.footer a{
+	color: black;
+	text-decoration: none;
+}
+
+/* Estilo del enlace cuando pasa el ratón sobre él */
+.footer a:hover{
+	color: #7dcea0;
+	text-decoration: underline;
 }
   
 .wrapper {
@@ -42,30 +66,68 @@ body {
     "header  header  header"
     "sidebar content content"
     "footer  footer  footer";
-    background-color: #edbb99 ;
+    background-color: #82e0aa;
     height: 100vh;
 }
   
 .box {
     color: #000000;
-    border-color: #000000;
+    border-color: #ffffff;
     border-width: 1px;
     border-style: solid;
     border-radius: 5px;
-    padding: 50px;
     font-size: 100%;
 }
 
 .actividad{
-    background-color: #ffffff;
+    background-color: #52be80;
     text-align: center;
 }
 
 .imagen{
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     align-self: center;
     border-style: solid;
     border-width: 1px;
     border-radius: 10px;
+	max-width: 100%;
+}
+
+.logo{
+    grid-area: logo;
+}
+
+.titulo{
+    grid-area: titulo;
+    font-size: 80px;
+	margin: 0;
+	text-align: left;
+}
+
+.menu{
+    grid-area: menu;
+	text-align: left;
+	margin: 0;
+}
+
+.menu ul li{
+    display: inline; /* Los elementos del menu de muestran en la misma línea */
+    margin-right: 20px;
+	padding: 10px;
+	background-color: #ffffff;
+}
+
+.boton{
+	padding: 10px;
+	margin-right: 10px;
+	background-color: #145a32;
+	color: #ffffff;
+	border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.boton:hover{
+	background-color: #82e0aa;
 }
