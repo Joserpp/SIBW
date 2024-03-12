@@ -12,11 +12,6 @@ body {
     place-items: center;
 }
 
-/* Eliminamos el borde superior de la tabala */
-.tabla tr:first-child td{
-    border-top: none;
-}
-
 .content {
     grid-area: content;
     display: grid;
