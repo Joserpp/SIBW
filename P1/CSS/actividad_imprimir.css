@@ -10,14 +10,26 @@ body {
     display: grid;
     grid-template-areas:
     "header  header  header"
-    "content content content"
-    "content  content  content";
-    height: 100vh;
+    "content content content";
 }
 
-/*****************************************************/
-/* Configuración contenido principal de la actividad */
-/*****************************************************/
+/*************************************/
+/* Configuración de la barra lateral */
+/*************************************/
+  
+.sidebar {
+    grid-area: sidebar;
+	background-image: url('../Imagenes/cabecera.png');
+	background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+    display: none; /* Ocultamos la barra lateral */
+}
+
+/*************************************/
+/* Configuración de las actividades  */
+/*************************************/
 
 .content {
     grid-area: content;
@@ -28,23 +40,19 @@ body {
 .content h1{
     font-size: 40px;
     font-weight: bold;
-    font-family: "Jost",sans-serif; 
+    font-family: "Jost",sans-serif;
+    text-align: center;
 }
 
 .content h2{
     font-weight: bold;
     font-family: "Jost",sans-serif; 
+    text-align: center;
 }
 
 .content h3{
     font-weight: bold;
     font-family: "Jost",sans-serif; 
-}
-
-.cabecera{
-    display: flex;
-    flex-direction: column;
-    place-items: center;
 }
 
 .textfotos{
@@ -73,6 +81,18 @@ body {
 	max-width: 100%;
 }
 
+.boton2{
+    margin-right: 30px;
+}
+
+.boton2 a{
+    text-decoration: none;
+}
+
+.boton2 a img{
+    width: 60px;
+}
+
 /*************************************/
 /* Configuración de la cabecera      */
 /*************************************/
@@ -96,5 +116,60 @@ body {
     font-weight: bold;
     font-family: "Jost",sans-serif;
 	margin: 0;
+}
+
+.menu{
+    grid-area: menu;
+    display: flex;
 	text-align: left;
+	margin: 0;
+    margin-left: 400px;
+    display: none; /* Ocultamos el menu */
+}
+
+.menu ul{
+    list-style: none;
+}
+
+.menu ul li{
+    display: inline;
+}
+
+.boton{
+	margin-right: 30px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.boton a{
+    text-decoration: none;
+}
+
+.boton a:hover{
+	color: #82e0aa;
+}
+
+/*************************************/
+/* Configuración del pie de página   */
+/*************************************/
+  
+.footer {
+    grid-area: footer;
+    text-align: center;
+    background-color:  #145a32;
+    padding: 10px;
+    display: none; /* Ocultamos el pie de página */
+}
+
+/* Estilo para el enlace que hay en el "footer" */
+.footer a{
+	color: black;
+	text-decoration: none;
+}
+
+/* Estilo del enlace cuando pasa el ratón sobre él */
+.footer a:hover{
+	color: #7dcea0;
+	text-decoration: underline;
 }
