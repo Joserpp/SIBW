@@ -1,8 +1,38 @@
+/*************************************/
+/* Configuración general             */
+/*************************************/
+
 body {
     margin: 20px;
     background-color:  #82e0aa;
 }
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "header  header  header"
+    "sidebar content content"
+    "footer  footer  footer";
+    background-color: #82e0aa;
+    height: 100vh;
+}
   
+.box {
+    color: #000000;
+    border-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    font-size: 100%;
+}
+
+/*************************************/
+/* Configuración de la barra lateral */
+/*************************************/
+
 .sidebar {
     grid-area: sidebar;
 	background-image: url('../Imagenes/cabecera.png');
@@ -12,6 +42,10 @@ body {
     place-items: center;
 }
 
+/*************************************/
+/* Configuración de las actividades  */
+/*************************************/
+
 .content {
     grid-area: content;
     display: grid;
@@ -20,10 +54,6 @@ body {
     place-items: center;
     background-color: #eafef1;
     padding: 30px;
-}
-
-.content img{
-    max-width: 100%;
 }
 
 .actividad{
@@ -52,6 +82,10 @@ body {
 	max-width: 100%;
 }
 
+/*************************************/
+/* Configuración de la cabecera      */
+/*************************************/
+
 .header {
     grid-area: header;
 	display: grid;
@@ -66,51 +100,10 @@ body {
     "logo titulo titulo titulo"
     "logo menu menu menu";
 }
-  
-.footer {
-    grid-area: footer;
-    text-align: center;
-    background-color:  #145a32;
-    padding: 10px;
-}
-
-/* Estilo para el enlace que hay en el "footer" */
-.footer a{
-	color: black;
-	text-decoration: none;
-}
-
-/* Estilo del enlace cuando pasa el ratón sobre él */
-.footer a:hover{
-	color: #7dcea0;
-	text-decoration: underline;
-}
-  
-.wrapper {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 3fr 3fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-    "header  header  header"
-    "sidebar content content"
-    "footer  footer  footer";
-    background-color: #82e0aa;
-    height: 100vh;
-}
-  
-.box {
-    color: #000000;
-    border-color: #ffffff;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 5px;
-    font-size: 100%;
-}
 
 .logo{
     grid-area: logo;
-    display: flex;
+    width: 100px;
 }
 
 .titulo{
@@ -155,3 +148,27 @@ body {
 .boton a:hover{
 	color: #82e0aa;
 }
+
+/*************************************/
+/* Configuración del pie de página   */
+/*************************************/
+  
+.footer {
+    grid-area: footer;
+    text-align: center;
+    background-color:  #145a32;
+    padding: 10px;
+}
+
+/* Estilo para el enlace que hay en el "footer" */
+.footer a{
+	color: black;
+	text-decoration: none;
+}
+
+/* Estilo del enlace cuando pasa el ratón sobre él */
+.footer a:hover{
+	color: #7dcea0;
+	text-decoration: underline;
+}
+
