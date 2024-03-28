@@ -177,6 +177,55 @@ body {
 }
 
 /*************************************/
+/* Configuración de los comentarios  */
+/*************************************/
+
+.comentarios {
+    grid-area: comment;
+    background-color: #ffffff;
+	background-size: cover;
+    background-position: center;
+    display: none;
+}
+
+.toggle-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.comments-panel {
+    margin-top: 10px;
+}
+
+.comments-panel #commentsList {
+    margin-bottom: 10px;
+}
+
+.comments-panel form {
+    margin-top: 10px;
+}
+
+.comments-panel textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.comments-panel button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/*************************************/
 /* Configuración del pie de página   */
 /*************************************/
   

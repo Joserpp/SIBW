@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="./CSS/actividad.css">
     </head>
     <body>
-        <div class="wrapper">
+        <div class="wrapper" id="wrapper">
             <header class="box header">
                 <div class="logo">
                     <a href="portada.html">
@@ -149,9 +149,23 @@
                                 <img src="./Imagenes/impresion.png">
                             </a>
 						</li>
+                        <li class="comentarios">
+							<button id="toggleButton">C</button>
+						</li>
                     </ul>
                 </nav>
             </main>
+            <div class="box comentarios" id="comentarios">
+                <div class="comments-panel" id="commentsPanel">
+                    <div id="commentsList"></div>
+                    <!-- Aquí puedes colocar tu formulario de comentarios o cualquier otro contenido -->
+                    <form onsubmit="addComment(); return false;">
+                        <textarea id="commentInput" placeholder="Escribe tu comentario aquí..."></textarea>
+                        <button type="submit">Enviar comentario</button>
+                    </form>
+                </div>
+            </div>
+            <script src="comentarios.js"></script>
             <footer class="box footer">
                 <p>©2024 - <a href="mailto:jrpp@correo.ugr.es">Jose Ramón Plaza Plaza</a></p>
             </footer>
