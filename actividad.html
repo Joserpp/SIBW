@@ -111,21 +111,6 @@
                             veritatis dolor id esse quae eum enim eveniet qui 
                             dicta eveniet. 
                         </p>
-                        <p>
-                            Vel nesciunt consectetur sed natus omnis in illo mollitia 
-                            et pariatur quia 33 quos doloremque. Est dolor repudiandae 
-                            aut alias nisi non explicabo laboriosam aut repellat 
-                            sint aut maiores animi id rerum sint et inventore asperiores. 
-                            Et aliquid doloremque qui rerum fugit vel dolor voluptates 
-                            et odio laboriosam aut voluptate eius. At repudiandae 
-                            molestias nam fugiat minima est numquam consequatur et 
-                            ullam error est eaque accusantium id quis dicta in minima 
-                            velit! Rem nobis corrupti et blanditiis ratione et voluptatum 
-                            consequatur est ratione voluptates ut nobis iste. Ex dolore 
-                            corporis ad voluptate esse in nobis magni hic voluptas minima 
-                            nam quaerat perferendis qui quia consequatur vel voluptatem 
-                            unde.
-                        </p>
                     </div>
                     <div class="imagen">
                         <img src="./Imagenes/actividad1.png">
@@ -149,21 +134,32 @@
                                 <img src="./Imagenes/impresion.png">
                             </a>
 						</li>
-                        <li class="comentarios">
-							<button id="toggleButton">C</button>
+                        <li class="boton2">
+                            <img src="./Imagenes/comentarios.png" id="toggleButton">
 						</li>
                     </ul>
                 </nav>
             </main>
             <div class="box comentarios" id="comentarios">
-                <div class="comments-panel" id="commentsPanel">
-                    <div id="commentsList"></div>
-                    <!-- Aquí puedes colocar tu formulario de comentarios o cualquier otro contenido -->
-                    <form onsubmit="addComment(); return false;">
-                        <textarea id="commentInput" placeholder="Escribe tu comentario aquí..."></textarea>
-                        <button type="submit">Enviar comentario</button>
-                    </form>
+                <div id="com">
+                    <div class="comment">
+                        <strong>Alonso Doña</strong>
+                        <p>Comentario 1</p>
+                        <span class="fecha">20/3/2023</span>
+                    </div>
+                    <div class="comment">
+                        <strong>Jaime Parra</strong>
+                        <p>Comentario 2</p>
+                        <span class="fecha">12/11/2023</span>
+                    </div>
                 </div>
+                <form id="añadirComentario" class="añadirComentario">
+                    <input type="text" id="name" placeholder="Nombre" required><br>
+                    <input type="email" id="email" placeholder="E-mail" required><br>
+                    <textarea id="texto" placeholder="Escribe tu comentario aquí..." required></textarea>
+                    <button type="submit">Enviar comentario</button>
+                    <!-- Al escribir un primer comentario no me funciona pero en los siguientes si -->
+                </form>
             </div>
             <script src="comentarios.js"></script>
             <footer class="box footer">

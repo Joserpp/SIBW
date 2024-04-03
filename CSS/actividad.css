@@ -10,12 +10,12 @@ body {
 .wrapper {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-columns: 1fr 3fr 3fr 2fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-    "header  header  header"
-    "sidebar content content"
-    "footer  footer  footer";
+    "header  header  header header"
+    "sidebar content content content"
+    "footer  footer  footer footer";
     background-color: #82e0aa;
     height: 100vh;
 }
@@ -109,6 +109,10 @@ body {
     width: 60px;
 }
 
+.boton2 img{
+    width: 60px;
+}
+
 /*************************************/
 /* Configuración de la cabecera      */
 /*************************************/
@@ -186,43 +190,74 @@ body {
 	background-size: cover;
     background-position: center;
     display: none;
+    padding: 15px;
+    background-color: #eafef1;
 }
 
-.toggle-btn {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.comments-panel {
-    margin-top: 10px;
-}
-
-.comments-panel #commentsList {
+.comment {
     margin-bottom: 10px;
+    border: 2px solid #257d7c;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #c9ffec;
+    text-align: center;
 }
 
-.comments-panel form {
-    margin-top: 10px;
+.fecha {
+    text-align: right;
+    font-size: small;
 }
 
-.comments-panel textarea {
+/* Estilos para el formulario */
+.añadirComentario {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los campos de entrada */
+.añadirComentario input[type="text"],
+.añadirComentario input[type="email"],
+.añadirComentario textarea {
     width: 100%;
-    height: 100px;
-    resize: none;
+    padding: 10px;
     margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Para incluir el padding y border en el ancho total */
 }
 
-.comments-panel button {
-    padding: 5px 10px;
+/* Estilos para el botón de enviar */
+.añadirComentario button[type="submit"] {
     background-color: #007bff;
     color: #fff;
+    padding: 10px 20px;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 5px;
+}
+
+.añadirComentario button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el texto del área de comentario */
+.añadirComentario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical; /* Permitir redimensionar verticalmente */
+}
+
+/* Estilos para el placeholder */
+#añadirComentario input::placeholder,
+#añadirComentario textarea::placeholder {
+    color: #aaa;
 }
 
 /*************************************/
